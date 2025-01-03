@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+header .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header .nav ul li {
+    display: inline;
+}
+
+header .nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+header .nav ul li a:hover {
+    color: #FFC107;
+}
+
+.intro {
+    background: linear-gradient(45deg, #FF5722, #FF9800);
+    color: white;
+    text-align: center;
+    padding: 100px 20px 50px;
+    margin-top: 80px;
+}
+
+.intro h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.5rem;
+}
+
+.about, .projects, .contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2, .projects h2, .contact h2 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.projects .project-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.projects .card {
+    background-color: #FFEB3B;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.projects .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.projects .card p {
+    font-size: 1rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    padding: 15px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: #FFC107;
+}
+
+.contact button {
+    padding: 15px;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #E64A19;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .projects .project-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .intro h2 {
+        font-size: 2.5rem;
+    }
+
+    .about h2, .projects h2, .contact h2 {
+        font-size: 2rem;
+    }
+}
